@@ -1,57 +1,11 @@
-<?php 
-	// check if user coming from Request 
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        
-    // Assagin Varabile
-    	     $Name 				= $_POST['name'];
-             $Company 			= $_POST['Company'];
-             $Email 			= $_POST['Email'];
-             $Telephone			= $_POST['Telephone'];
-             $Subject 			= $_POST['Subject'];
-             $Translation		= $_POST['Translation-Type'];
-             $Delivery 			= $_POST['Delivery-Method'];
-             $Dateofdelivery 	= $_POST['Dateofdelivery'];
-             $Notes 			= $_POST['Notes'];
-    
-    // Array of erros
-    		$FE = array();
-			
-            	if (strlen($Name) <= 5){
-                	$FE[] = '<strong>Name</strong> must be at least 5 Chrahters';
-        		}
-	// Mail
-		$Mail = 'karimkisho2@gmail.com';
-		$header = 'From Website'.$Mail.'\r\n';
-			if(empty ($FE)){
-				mail('karimkisho2@gmail.com', $Subject, 
-				$Name.'\r\n'.$Company.'\r\n'.$Email.'\r\n'.$Telephone.'\r\n'.$Translation.'\r\n'.$Delivery.'\r\n'.
-				$Dateofdelivery.'\r\n'.$Notes,$header);
-				
-			 $Name 				= '';
-             $Company 			= '';
-             $Email 			= '';
-             $Telephone			= '';
-             $Subject 			= '';
-             $Translation		= '';
-             $Delivery 			= '';
-             $Dateofdelivery 	= '';
-             $Notes 			= '';
-    
-				
-			$Recived			= '<div class="TextModal"> We Recived Your Request, Thank You </div>';
-				}
-		}
-
-?>
-
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="../Css/css/font-awesome.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" 	href="../Css/style.css">
-<link rel="stylesheet" 	href="../Css/normalize.css">
-<link rel="stylesheet"  href="../Css/owl.carousel.min.css">
-<link rel="stylesheet"  href="../Css/owl.theme.default.css">
+<link href="Css/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" 	href="Css/style.css">
+<link rel="stylesheet" 	href="Css/normalize.css">
+<link rel="stylesheet"  href="Css/owl.carousel.min.css">
+<link rel="stylesheet"  href="Css/owl.theme.default.css">
 <link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css" >
 <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Red+Rose&display=swap">
 <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap">
@@ -65,12 +19,12 @@
 </head>
 
 <body id="my-scrollbar">
-
-<script src="../Js/Jquery.js"></script>
-<script src="../Js/Custom.js"></script>
-<script src="../Js/Scroll-Smooth.js"></script>
+<script src="Mail.php"></script>
+<script src="Js/Jquery.js"></script>
+<script src="Js/Custom.js"></script>
+<script src="Js/Scroll-Smooth.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script src="../Js/owl.carousel.min.js"></script>
+<script src="Js/owl.carousel.min.js"></script>
 
 <!-- Start Header -->
 <section class="Header">
@@ -249,16 +203,16 @@
     	<h1 class="upper text-center">Our <span class="main-color">Clients</span></h1>
         <h3 class="text-center">Our parent's in success, don't think too much and join with them</h3>
         <div class="owl-carousel">
-            <img src="../Css/Images/ati.png" style="margin-top: 20px;"/>
-            <img src="../Css/Images/al_hamra.png" style="margin-top:10px;"/>
-            <img src="../Css/Images/al_adeed.png" style="margin: 15px; width: 75px !important; height: 80px;"/>
-            <img src="../Css/Images/amer.png" style="margin-top:10px;"/>
-            <img src="../Css/Images/damac.png" style="margin-top:50px;"/>
-            <img src="../Css/Images/dubai_ensurance.png" style="margin-top:10px;"/>
-            <img src="../Css/Images/dammas.png" style="margin-top:40px;"/>
-            <img src="../Css/Images/ghoreer.png" style="margin-top:30px;"/>
-            <img src="../Css/Images/hadef.png" style="margin-top:15px;"/>
-            <img src="../Css/Images/tas_heel.png" style="margin-top: 40px; padding-bottom:30px;;"/>
+            <img src="Css/Images/ati.png" style="margin-top: 20px;"/>
+            <img src="Css/Images/al_hamra.png" style="margin-top:10px;"/>
+            <img src="Css/Images/al_adeed.png" style="margin: 15px; width: 75px !important; height: 80px;"/>
+            <img src="Css/Images/amer.png" style="margin-top:10px;"/>
+            <img src="Css/Images/damac.png" style="margin-top:50px;"/>
+            <img src="Css/Images/dubai_ensurance.png" style="margin-top:10px;"/>
+            <img src="Css/Images/dammas.png" style="margin-top:40px;"/>
+            <img src="Css/Images/ghoreer.png" style="margin-top:30px;"/>
+            <img src="Css/Images/hadef.png" style="margin-top:15px;"/>
+            <img src="Css/Images/tas_heel.png" style="margin-top: 40px; padding-bottom:30px;;"/>
         </div>
     </div>
 </section><br>
@@ -274,27 +228,27 @@
             <div class="about-me">
             	<div class="Head-About main-backgroundColor">
                 	<div class="A-Mostafa">
-                        <img src="../Css/Images/businessman_PNG6566.png"/>
+                        <img src="Css/Images/businessman_PNG6566.png"/>
                         <span>Mostafa Nasr<h6>CEO</h6></span>
                     </div>
                 	<div class="A-Nancy">
-                        <img src="../Css/Images/businessman_PNG6566.png"/>
+                        <img src="Css/Images/businessman_PNG6566.png"/>
                         <span>Nancy<h6>CEO</h6></span>
                     </div>                       
                 	<div class="A-Nehal">
-                        <img src="../Css/Images/businessman_PNG6566.png"/>
+                        <img src="Css/Images/businessman_PNG6566.png"/>
                         <span>Nehal<h6>CEO</h6></span>
                     </div>
                 	<div class="A-Shaima">
-                        <img src="../Css/Images/businessman_PNG6566.png"/>
+                        <img src="Css/Images/businessman_PNG6566.png"/>
                         <span>Shaimaa<h6>CEO</h6></span>
                     </div>
                 	<div class="A-Donia">
-                        <img src="../Css/Images/businessman_PNG6566.png"/>
+                        <img src="Css/Images/businessman_PNG6566.png"/>
                         <span>Donia<h6>CEO</h6></span>
                     </div>
                 	<div class="A-Karim">
-                        <img src="../Css/Images/businessman_PNG6566.png"/>
+                        <img src="Css/Images/businessman_PNG6566.png"/>
                         <span>karim<h6>CEO</h6></span>
                     </div>
                     
@@ -311,27 +265,27 @@
             </div>
             <div class="Agents">
             	<div class="A-pp Mostafa" style="padding-top:20px;">
-                	<img src="../Css/Images/al_hamra.png"/>
+                	<img src="Css/Images/al_hamra.png"/>
                     <span>Mostafa <h6>Front Office Department</h6></span>
                 </div>
                 <div class="A-pp Nancy active">
-                	<img src="../Css/Images/al_hamra.png"/>
+                	<img src="Css/Images/al_hamra.png"/>
                     <span>Nancy <h6>Front Office Department</h6></span>
                 </div>
                 <div class="A-pp Nehal">
-                	<img src="../Css/Images/al_hamra.png"/>
+                	<img src="Css/Images/al_hamra.png"/>
                     <span>Nehal <h6>Front Office Department</h6></span>
                 </div>
                 <div class="A-pp Shaima">
-                	<img src="../Css/Images/al_hamra.png"/>
+                	<img src="Css/Images/al_hamra.png"/>
                     <span>Shaimaa <h6>Front Office Department</h6></span>
                 </div>
                 <div class="A-pp Donia active">
-                	<img src="../Css/Images/al_hamra.png"/>
+                	<img src="Css/Images/al_hamra.png"/>
                     <span>Donia <h6>Front Office Department</h6></span>
                 </div>
                 <div class="A-pp karim">
-                	<img src="../Css/Images/al_hamra.png"/>
+                	<img src="Css/Images/al_hamra.png"/>
                     <span>Karim<h6>Front Office Department</h6></span>
                 </div>                                                                               
             </div>
