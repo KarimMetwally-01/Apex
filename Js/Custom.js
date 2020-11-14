@@ -95,13 +95,13 @@ $('.owl-carousel').owlCarousel({
 			})
 		$('.fa-sort-down, .C2').click(function(){
 				$('.A-pp').css('bottom', '280px');
-				$('.C2').removeClass('far').addClass('fas')
-				$('.C1').removeClass('fas').addClass('far')						
+				$('.C2').removeClass('fa-circle-o').addClass('fa-circle')
+				$('.C1').removeClass('fa-circle').addClass('fa-circle-o')						
 			})
 		$('.fa-sort-up, .C1').click(function(){
 				$('.A-pp').css('bottom', '0px');
-				$('.C1').removeClass('far').addClass('fas')
-				$('.C2').removeClass('fas').addClass('far')										
+				$('.C1').removeClass('fa-circle-o').addClass('fa-circle')
+				$('.C2').removeClass('fa-circle').addClass('fa-circle-o')										
 			})		
 		$('.Mostafa').click(function(){
 				$('.A-Nancy, .A-Nehal, .A-Donia, .A-Shaima,.A-Karim').css('display','none');	
