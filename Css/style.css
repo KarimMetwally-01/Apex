@@ -429,7 +429,7 @@ a:active {
     border-radius: 20%;
     padding: 10px 20px 0px 10px;
 }
-.SelectAgent .fas, .far {
+.SelectAgent .fa {
 	cursor: pointer;
 }
 /* End TEAMWORK */
